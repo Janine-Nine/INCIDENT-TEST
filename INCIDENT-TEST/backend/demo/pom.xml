@@ -1,26 +1,26 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 <modelVersion>4.0.0</modelVersion>
-<!--  =========================================  -->
-<!--  PARENT  -->
-<!--  =========================================  -->
+<!--   =========================================   -->
+<!--   PARENT   -->
+<!--   =========================================   -->
 <parent>
 <groupId>org.springframework.boot</groupId>
 <artifactId>spring-boot-starter-parent</artifactId>
 <version>3.3.0</version>
 <relativePath/>
 </parent>
-<!--  =========================================  -->
-<!--  PROJECT INFO  -->
-<!--  =========================================  -->
+<!--   =========================================   -->
+<!--   PROJECT INFO   -->
+<!--   =========================================   -->
 <groupId>com.incidents</groupId>
 <artifactId>incident-management-api</artifactId>
 <version>1.0.0</version>
 <name>Incident Management API</name>
 <description> Sistema Full Stack para gerenciamento e análise de incidentes técnicos utilizando Java Spring Boot. </description>
 <packaging>jar</packaging>
-<!--  =========================================  -->
-<!--  PROPERTIES  -->
-<!--  =========================================  -->
+<!--   =========================================   -->
+<!--   PROPERTIES   -->
+<!--   =========================================   -->
 <properties>
 <java.version>17</java.version>
 <maven.compiler.source>17</maven.compiler.source>
@@ -30,57 +30,57 @@
 <springdoc.version>2.5.0</springdoc.version>
 <lombok.version>1.18.46</lombok.version>
 </properties>
-<!--  =========================================  -->
-<!--  DEPENDENCIES  -->
-<!--  =========================================  -->
+<!--   =========================================   -->
+<!--   DEPENDENCIES   -->
+<!--   =========================================   -->
 <dependencies>
-<!--  =========================================  -->
-<!--  WEB  -->
-<!--  =========================================  -->
+<!--   =========================================   -->
+<!--   WEB   -->
+<!--   =========================================   -->
 <dependency>
 <groupId>org.springframework.boot</groupId>
 <artifactId>spring-boot-starter-web</artifactId>
 </dependency>
-<!--  =========================================  -->
-<!--  JPA  -->
-<!--  =========================================  -->
+<!--   =========================================   -->
+<!--   JPA   -->
+<!--   =========================================   -->
 <dependency>
 <groupId>org.springframework.boot</groupId>
 <artifactId>spring-boot-starter-data-jpa</artifactId>
 </dependency>
-<!--  =========================================  -->
-<!--  SECURITY  -->
-<!--  =========================================  -->
+<!--   =========================================   -->
+<!--   SECURITY   -->
+<!--   =========================================   -->
 <dependency>
 <groupId>org.springframework.boot</groupId>
 <artifactId>spring-boot-starter-security</artifactId>
 </dependency>
-<!--  =========================================  -->
-<!--  VALIDATION  -->
-<!--  =========================================  -->
+<!--   =========================================   -->
+<!--   VALIDATION   -->
+<!--   =========================================   -->
 <dependency>
 <groupId>org.springframework.boot</groupId>
 <artifactId>spring-boot-starter-validation</artifactId>
 </dependency>
-<!--  =========================================  -->
-<!--  POSTGRESQL  -->
-<!--  =========================================  -->
+<!--   =========================================   -->
+<!--   POSTGRESQL   -->
+<!--   =========================================   -->
 <dependency>
 <groupId>org.postgresql</groupId>
 <artifactId>postgresql</artifactId>
 <scope>runtime</scope>
 </dependency>
-<!--  =========================================  -->
-<!--  H2 DATABASE  -->
-<!--  =========================================  -->
+<!--   =========================================   -->
+<!--   H2 DATABASE   -->
+<!--   =========================================   -->
 <dependency>
 <groupId>com.h2database</groupId>
 <artifactId>h2</artifactId>
 <scope>runtime</scope>
 </dependency>
-<!--  =========================================  -->
-<!--  JWT  -->
-<!--  =========================================  -->
+<!--   =========================================   -->
+<!--   JWT   -->
+<!--   =========================================   -->
 <dependency>
 <groupId>io.jsonwebtoken</groupId>
 <artifactId>jjwt-api</artifactId>
@@ -98,72 +98,80 @@
 <version>${jjwt.version}</version>
 <scope>runtime</scope>
 </dependency>
-<!--  =========================================  -->
-<!--  SWAGGER / OPENAPI  -->
-<!--  =========================================  -->
+<!--   =========================================   -->
+<!--   SWAGGER / OPENAPI   -->
+<!--   =========================================   -->
 <dependency>
 <groupId>org.springdoc</groupId>
 <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
 <version>${springdoc.version}</version>
 </dependency>
-<!--  =========================================  -->
-<!--  ACTUATOR  -->
-<!--  =========================================  -->
+<!--   =========================================   -->
+<!--   ACTUATOR   -->
+<!--   =========================================   -->
 <dependency>
 <groupId>org.springframework.boot</groupId>
 <artifactId>spring-boot-starter-actuator</artifactId>
 </dependency>
-<!--  =========================================  -->
-<!--  LOMBOK  -->
-<!--  =========================================  -->
+<!--   =========================================   -->
+<!--   LOMBOK   -->
+<!--   =========================================   -->
 <dependency>
 <groupId>org.projectlombok</groupId>
 <artifactId>lombok</artifactId>
 <version>${lombok.version}</version>
 <optional>true</optional>
 </dependency>
-<!--  =========================================  -->
-<!--  DEVTOOLS  -->
-<!--  =========================================  -->
+<!--   =========================================   -->
+<!--   BUCKET4J - RATE LIMIT   -->
+<!--   =========================================   -->
+<dependency>
+<groupId>com.bucket4j</groupId>
+<artifactId>bucket4j-core</artifactId>
+<version>8.10.1</version>
+</dependency>
+<!--   =========================================   -->
+<!--   DEVTOOLS   -->
+<!--   =========================================   -->
 <dependency>
 <groupId>org.springframework.boot</groupId>
 <artifactId>spring-boot-devtools</artifactId>
 <scope>runtime</scope>
 <optional>true</optional>
 </dependency>
-<!--  =========================================  -->
-<!--  TEST  -->
-<!--  =========================================  -->
+<!--   =========================================   -->
+<!--   TEST   -->
+<!--   =========================================   -->
 <dependency>
 <groupId>org.springframework.boot</groupId>
 <artifactId>spring-boot-starter-test</artifactId>
 <scope>test</scope>
 </dependency>
-<!--  =========================================  -->
-<!--  SECURITY TEST  -->
-<!--  =========================================  -->
+<!--   =========================================   -->
+<!--   SECURITY TEST   -->
+<!--   =========================================   -->
 <dependency>
 <groupId>org.springframework.security</groupId>
 <artifactId>spring-security-test</artifactId>
 <scope>test</scope>
 </dependency>
-<!--  =========================================  -->
-<!--  MOCKITO  -->
-<!--  =========================================  -->
+<!--   =========================================   -->
+<!--   MOCKITO   -->
+<!--   =========================================   -->
 <dependency>
 <groupId>org.mockito</groupId>
 <artifactId>mockito-core</artifactId>
 <scope>test</scope>
 </dependency>
 </dependencies>
-<!--  =========================================  -->
-<!--  BUILD  -->
-<!--  =========================================  -->
+<!--   =========================================   -->
+<!--   BUILD   -->
+<!--   =========================================   -->
 <build>
 <plugins>
-<!--  =========================================  -->
-<!--  SPRING BOOT  -->
-<!--  =========================================  -->
+<!--   =========================================   -->
+<!--   SPRING BOOT   -->
+<!--   =========================================   -->
 <plugin>
 <groupId>org.springframework.boot</groupId>
 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -176,9 +184,9 @@
 </excludes>
 </configuration>
 </plugin>
-<!--  =========================================  -->
-<!--  MAVEN COMPILER  -->
-<!--  =========================================  -->
+<!--   =========================================   -->
+<!--   MAVEN COMPILER   -->
+<!--   =========================================   -->
 <plugin>
 <groupId>org.apache.maven.plugins</groupId>
 <artifactId>maven-compiler-plugin</artifactId>
@@ -195,9 +203,9 @@
 </annotationProcessorPaths>
 </configuration>
 </plugin>
-<!--  =========================================  -->
-<!--  SUREFIRE  -->
-<!--  =========================================  -->
+<!--   =========================================   -->
+<!--   SUREFIRE   -->
+<!--   =========================================   -->
 <plugin>
 <groupId>org.apache.maven.plugins</groupId>
 <artifactId>maven-surefire-plugin</artifactId>
