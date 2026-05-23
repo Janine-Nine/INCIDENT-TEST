@@ -1,0 +1,82 @@
+:root {
+
+  /* =========================================================
+     COLORS
+  ========================================================= */
+
+  --bg-primary: #020617;
+
+  --bg-secondary: #0f172a;
+
+  --bg-tertiary: #111827;
+
+  --bg-card: rgba(17, 24, 39, 0.92);
+
+  --border-color: #1e293b;
+
+  --border-light: #334155;
+
+  --text-primary: #ffffff;
+
+  --text-secondary: #cbd5e1;
+
+  --text-muted: #94a3b8;
+
+  --blue: #3b82f6;
+
+  --blue-dark: #2563eb;
+
+  --green: #22c55e;
+
+  --yellow: #facc15;
+
+  --orange: #fb923c;
+
+  --red: #ef4444;
+
+  --purple: #8b5cf6;
+
+  --cyan: #06b6d4;
+
+  /* =========================================================
+     UI
+  ========================================================= */
+
+  --border-radius-sm: 10px;
+
+  --border-radius: 16px;
+
+  --border-radius-lg: 24px;
+
+  --shadow-sm:
+    0 4px 10px rgba(0,0,0,0.2);
+
+  --shadow:
+    0 10px 30px rgba(0,0,0,0.35);
+
+  --shadow-lg:
+    0 20px 45px rgba(0,0,0,0.45);
+
+  --transition: 0.3s ease;
+
+  --gradient-primary:
+    linear-gradient(
+      135deg,
+      #3b82f6,
+      #8b5cf6
+    );
+
+  --gradient-danger:
+    linear-gradient(
+      135deg,
+      #ef4444,
+      #dc2626
+    );
+
+  --gradient-success:
+    linear-gradient(
+      135deg,
+      #22c55e,
+      #16a34a
+    );
+}

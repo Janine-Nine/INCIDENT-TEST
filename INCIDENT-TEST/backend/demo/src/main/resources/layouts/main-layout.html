@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+      xmlns:th="http://www.thymeleaf.org">
+
+<!-- ========================================= -->
+<!-- HEADER -->
+<!-- ========================================= -->
+
+<th:block th:replace="fragments/header :: head">
+</th:block>
+
+<body>
+
+<!-- ========================================= -->
+<!-- NAVBAR -->
+<!-- ========================================= -->
+
+<th:block th:replace="fragments/navbar">
+</th:block>
+
+<!-- ========================================= -->
+<!-- SIDEBAR -->
+<!-- ========================================= -->
+
+<th:block th:replace="fragments/sidebar">
+</th:block>
+
+<!-- ========================================= -->
+<!-- MAIN CONTENT -->
+<!-- ========================================= -->
+
+<main class="main-content">
+
+    <section class="content">
+
+        <div th:replace="${content}">
+        </div>
+
+    </section>
+
+</main>
+
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
+
+<th:block th:replace="fragments/footer">
+</th:block>
+
+<!-- ========================================= -->
+<!-- SCRIPTS -->
+<!-- ========================================= -->
+
+<th:block th:replace="fragments/scripts">
+</th:block>
+
+</body>
+
+</html>

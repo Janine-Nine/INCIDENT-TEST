@@ -1,0 +1,13 @@
+Adicionar um favicon personalizado do sistema.
+
+Sugestão:
+- Ícone de alerta 🚨
+- Ícone de monitoramento
+- Ícone corporativo minimalista
+
+Nome do arquivo:
+favicon.ico
+
+Salvar em:
+
+src/main/resources/static/favicon.ico

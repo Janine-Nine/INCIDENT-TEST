@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Create Incident | Incident System</title>
+
+  <!-- Google Fonts -->
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- CSS -->
+  <link
+    rel="stylesheet"
+    href="CreateIncident.css"
+  />
+
+</head>
+
+<body>
+
+   <!-- =========================
+       NAVBAR
+  ========================== -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark">
+
+    <div class="container-fluid">
+
+      <a
+        class="navbar-brand fw-bold"
+        href="index.html"
+      >
+        🚨 Incident System
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div
+        class="collapse navbar-collapse"
+        id="navbarNav"
+      >
+
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="dashboard.html"
+            >
+              Dashboard
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="Incidents.html"
+            >
+              Incidents
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="CreateIncident.html"
+            >
+              Create Incident
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="EditIncident.html"
+            >
+              Edit Incident
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="IncidentDetails.html"
+            >
+              Details
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              href="Login.html"
+            >
+              Login
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="NotFound.html"
+            >
+              404
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+  <!-- =========================
+       MAIN
+  ========================== -->
+
+  <main class="main-container">
+
+    <section class="incident-card">
+
+      <div class="header-content">
+
+        <span class="badge-status">
+          New Incident
+        </span>
+
+        <h1>
+          Criar Novo Incidente
+        </h1>
+
+        <p>
+          Registre incidentes técnicos rapidamente e mantenha o monitoramento da equipe organizado.
+        </p>
+
+      </div>
+
+      <div class="banner-image">
+
+        <img
+          src="img/background.png"
+          alt="Incident Management"
+        />
+
+      </div>
+
+      <!-- =========================
+           FORM
+      ========================== -->
+
+      <form class="incident-form">
+
+        <div class="form-group">
+
+          <label for="title">
+            Título do Incidente
+          </label>
+
+          <input
+            type="text"
+            id="title"
+            placeholder="Ex: API Authentication Failure"
+            required
+          />
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="description">
+            Descrição
+          </label>
+
+          <textarea
+            id="description"
+            placeholder="Descreva o incidente detalhadamente..."
+            required
+          ></textarea>
+
+        </div>
+
+        <div class="form-row">
+
+          <div class="form-group">
+
+            <label for="severity">
+              Severidade
+            </label>
+
+            <select id="severity">
+
+              <option value="LOW">
+                LOW
+              </option>
+
+              <option value="MEDIUM">
+                MEDIUM
+              </option>
+
+              <option value="HIGH">
+                HIGH
+              </option>
+
+              <option value="CRITICAL">
+                CRITICAL
+              </option>
+
+            </select>
+
+          </div>
+
+          <div class="form-group">
+
+            <label for="team">
+              Equipe Responsável
+            </label>
+
+            <input
+              type="text"
+              id="team"
+              placeholder="Backend Team"
+            />
+
+          </div>
+
+        </div>
+
+        <!-- =========================
+             BADGES
+        ========================== -->
+
+        <div class="badges">
+
+          <span class="badge low">
+            LOW
+          </span>
+
+          <span class="badge medium">
+            MEDIUM
+          </span>
+
+          <span class="badge high">
+            HIGH
+          </span>
+
+          <span class="badge critical">
+            CRITICAL
+          </span>
+
+        </div>
+
+        <!-- =========================
+             BUTTONS
+        ========================== -->
+
+        <div class="button-group">
+
+          <button
+            type="submit"
+            class="btn-create"
+          >
+            Criar Incidente
+          </button>
+
+          <button
+            type="reset"
+            class="btn-reset"
+          >
+            Limpar
+          </button>
+
+        </div>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 Incident Management System
+    </p>
+
+    <span>
+      Enterprise Monitoring Platform
+    </span>
+
+  </footer>
+
+  <!-- Bootstrap JS -->
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+</body>
+
+</html>

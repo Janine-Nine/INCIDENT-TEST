@@ -1,0 +1,224 @@
+.tableContainer {
+
+  background: var(--bg-card);
+
+  border:
+    1px solid var(--border-light);
+
+  border-radius: var(--border-radius-lg);
+
+  overflow-x: auto;
+
+  box-shadow: var(--shadow);
+
+  animation:
+    fadeUp 0.5s ease;
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.table {
+
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+.table thead {
+
+  background: #1e293b;
+}
+
+.table th {
+
+  padding: 18px;
+
+  text-align: left;
+
+  color: var(--text-secondary);
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  border-bottom:
+    1px solid var(--border-light);
+}
+
+.table td {
+
+  padding: 18px;
+
+  border-bottom:
+    1px solid rgba(255,255,255,0.04);
+}
+
+.table tr {
+
+  transition: var(--transition);
+}
+
+.table tbody tr:hover {
+
+  background:
+    rgba(59,130,246,0.06);
+}
+
+/* =========================================================
+   BADGES
+========================================================= */
+
+.badge {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 7px 14px;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.4px;
+}
+
+/* STATUS */
+
+.open {
+
+  background:
+    rgba(239,68,68,0.15);
+
+  color: var(--red);
+}
+
+.progress {
+
+  background:
+    rgba(250,204,21,0.15);
+
+  color: var(--yellow);
+}
+
+.closed {
+
+  background:
+    rgba(34,197,94,0.15);
+
+  color: var(--green);
+}
+
+/* SEVERITY */
+
+.low {
+
+  background:
+    rgba(34,197,94,0.15);
+
+  color: var(--green);
+}
+
+.medium {
+
+  background:
+    rgba(250,204,21,0.15);
+
+  color: var(--yellow);
+}
+
+.high {
+
+  background:
+    rgba(251,146,60,0.15);
+
+  color: var(--orange);
+}
+
+.critical {
+
+  background:
+    rgba(239,68,68,0.15);
+
+  color: var(--red);
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.actions {
+
+  display: flex;
+
+  gap: 10px;
+}
+
+.button {
+
+  border: none;
+
+  padding: 10px 16px;
+
+  border-radius: var(--border-radius-sm);
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: var(--transition);
+}
+
+.button:hover {
+
+  transform: translateY(-2px);
+}
+
+.view {
+
+  background: var(--gradient-primary);
+
+  color: white;
+}
+
+.edit {
+
+  background:
+    rgba(59,130,246,0.15);
+
+  color: var(--blue);
+}
+
+.delete {
+
+  background:
+    rgba(239,68,68,0.15);
+
+  color: var(--red);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .table th,
+  .table td {
+
+    padding: 14px;
+  }
+
+  .actions {
+
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,180 @@
+@import "./variables.css";
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+html {
+
+  scroll-behavior: smooth;
+}
+
+body {
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  background:
+    radial-gradient(
+      circle at top,
+      #0f172a,
+      #020617
+    );
+
+  color: var(--text-primary);
+
+  min-height: 100vh;
+
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+
+  background: var(--border-light);
+
+  border-radius: 999px;
+}
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+a {
+
+  text-decoration: none;
+
+  color: inherit;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+button {
+
+  border: none;
+
+  cursor: pointer;
+
+  transition: var(--transition);
+
+  font-family: inherit;
+}
+
+button:hover {
+
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+input,
+textarea,
+select {
+
+  width: 100%;
+
+  padding: 14px 16px;
+
+  border-radius: var(--border-radius-sm);
+
+  border:
+    1px solid var(--border-light);
+
+  background: var(--bg-secondary);
+
+  color: white;
+
+  outline: none;
+
+  transition: var(--transition);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+
+  border-color: var(--blue);
+
+  box-shadow:
+    0 0 0 4px rgba(59,130,246,0.18);
+}
+
+/* =========================================================
+   LOADING SPINNER
+========================================================= */
+
+.spinner {
+
+  width: 55px;
+
+  height: 55px;
+
+  border:
+    5px solid rgba(255,255,255,0.08);
+
+  border-top:
+    5px solid var(--blue);
+
+  border-radius: 50%;
+
+  animation:
+    spin 1s linear infinite;
+
+  margin: 40px auto;
+}
+
+@keyframes spin {
+
+  100% {
+
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes fadeUp {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(20px);
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}

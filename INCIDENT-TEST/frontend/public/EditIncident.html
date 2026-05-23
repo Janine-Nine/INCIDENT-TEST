@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Editar Incidente | Incident System</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="EditIncident.css">
+
+</head>
+
+<body>
+
+   <!-- =========================
+       NAVBAR
+  ========================== -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark">
+
+    <div class="container-fluid">
+
+      <a
+        class="navbar-brand fw-bold"
+        href="index.html"
+      >
+        🚨 Incident System
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div
+        class="collapse navbar-collapse"
+        id="navbarNav"
+      >
+
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="dashboard.html"
+            >
+              Dashboard
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="Incidents.html"
+            >
+              Incidents
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="CreateIncident.html"
+            >
+              Create Incident
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="EditIncident.html"
+            >
+              Edit Incident
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="IncidentDetails.html"
+            >
+              Details
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              href="Login.html"
+            >
+              Login
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="NotFound.html"
+            >
+              404
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+  <!-- =========================
+       MAIN
+  ========================== -->
+
+  <main class="page-wrapper">
+
+    <div class="container incident-container">
+
+      <!-- HEADER -->
+
+      <div class="page-header">
+
+        <div>
+
+          <span class="incident-id">
+            #INC-2026
+          </span>
+
+          <h1>
+            Editar Incidente
+          </h1>
+
+          <p class="subtitle">
+            Atualize informações do incidente técnico e acompanhe o progresso da resolução.
+          </p>
+
+        </div>
+
+        <div class="status-card">
+
+          <span class="status-label">
+            Status Atual
+          </span>
+
+          <span class="badge-status progress">
+            IN_PROGRESS
+          </span>
+
+        </div>
+
+      </div>
+
+      <!-- FORM -->
+
+      <form class="incident-form">
+
+        <div class="form-grid">
+
+          <!-- LEFT -->
+
+          <div class="form-section">
+
+            <h2>
+              Informações Gerais
+            </h2>
+
+            <div class="input-group">
+
+              <label for="title">
+                Título do Incidente
+              </label>
+
+              <input
+                id="title"
+                type="text"
+                placeholder="Digite o título"
+                value="Servidor Offline"
+              >
+
+            </div>
+
+            <div class="input-group">
+
+              <label for="description">
+                Descrição
+              </label>
+
+              <textarea
+                id="description"
+                placeholder="Descreva o problema"
+              >API principal indisponível após atualização do sistema.</textarea>
+
+            </div>
+
+            <div class="input-group">
+
+              <label for="category">
+                Categoria
+              </label>
+
+              <select id="category">
+
+                <option>Infraestrutura</option>
+                <option>Banco de Dados</option>
+                <option>Segurança</option>
+                <option>API</option>
+                <option>Frontend</option>
+
+              </select>
+
+            </div>
+
+          </div>
+
+          <!-- RIGHT -->
+
+          <div class="form-section">
+
+            <h2>
+              Monitoramento
+            </h2>
+
+            <div class="input-group">
+
+              <label for="status">
+                Status
+              </label>
+
+              <select id="status">
+
+                <option>OPEN</option>
+
+                <option selected>
+                  IN_PROGRESS
+                </option>
+
+                <option>
+                  CLOSED
+                </option>
+
+              </select>
+
+            </div>
+
+            <div class="input-group">
+
+              <label for="priority">
+                Prioridade
+              </label>
+
+              <select id="priority">
+
+                <option>LOW</option>
+
+                <option>
+                  MEDIUM
+                </option>
+
+                <option selected>
+                  HIGH
+                </option>
+
+                <option>
+                  CRITICAL
+                </option>
+
+              </select>
+
+            </div>
+
+            <div class="input-group">
+
+              <label for="responsible">
+                Responsável
+              </label>
+
+              <input
+                id="responsible"
+                type="text"
+                placeholder="Nome responsável"
+                value="Equipe DevOps"
+              >
+
+            </div>
+
+            <div class="incident-info">
+
+              <div class="info-box">
+
+                <span>
+                  Criado em
+                </span>
+
+                <strong>
+                  22/05/2026
+                </strong>
+
+              </div>
+
+              <div class="info-box">
+
+                <span>
+                  Última atualização
+                </span>
+
+                <strong>
+                  Hoje às 19:42
+                </strong>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- BADGES -->
+
+        <div class="status-preview">
+
+          <span class="badge open">
+            OPEN
+          </span>
+
+          <span class="badge progress">
+            IN PROGRESS
+          </span>
+
+          <span class="badge closed">
+            CLOSED
+          </span>
+
+        </div>
+
+        <!-- BUTTONS -->
+
+        <div class="button-group">
+
+          <button
+            type="button"
+            class="secondary-btn"
+          >
+            Cancelar
+          </button>
+
+          <button
+            type="submit"
+            class="primary-btn"
+          >
+            Salvar Alterações
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 Incident Management System
+    </p>
+
+    <span>
+      Enterprise Monitoring Platform
+    </span>
+
+  </footer>
+
+  <!-- Bootstrap JS -->
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+  
+
+</body>
+
+</html>

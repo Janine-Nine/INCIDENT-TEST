@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Incident System | Incidents</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="Incidents.css">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+</head>
+
+<body>
+
+   <!-- =========================
+       NAVBAR
+  ========================== -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark">
+
+    <div class="container-fluid">
+
+      <a
+        class="navbar-brand fw-bold"
+        href="index.html"
+      >
+        🚨 Incident System
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div
+        class="collapse navbar-collapse"
+        id="navbarNav"
+      >
+
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="dashboard.html"
+            >
+              Dashboard
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="Incidents.html"
+            >
+              Incidents
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="CreateIncident.html"
+            >
+              Create Incident
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="EditIncident.html"
+            >
+              Edit Incident
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="IncidentDetails.html"
+            >
+              Details
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              href="Login.html"
+            >
+              Login
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="NotFound.html"
+            >
+              404
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+  
+  <!-- =========================
+       CONTAINER
+  ========================= -->
+
+  <div class="container">
+
+    <!-- HEADER -->
+
+    <div class="page-header">
+
+      <div>
+
+        <h1>Incident Monitoring Center</h1>
+
+        <p class="subtitle">
+          Gerenciamento completo de incidentes críticos,
+          monitoramento em tempo real e análise operacional.
+        </p>
+
+      </div>
+
+      <button class="new-incident-btn">
+        + Novo Incidente
+      </button>
+
+    </div>
+
+    <!-- CARDS -->
+
+    <div class="stats-grid">
+
+      <div class="stat-card">
+
+        <h3>Total Incidents</h3>
+
+        <span>148</span>
+
+        <p>+12% esta semana</p>
+
+      </div>
+
+      <div class="stat-card">
+
+        <h3>Critical</h3>
+
+        <span>09</span>
+
+        <p>Alta prioridade</p>
+
+      </div>
+
+      <div class="stat-card">
+
+        <h3>Resolved</h3>
+
+        <span>117</span>
+
+        <p>79% concluídos</p>
+
+      </div>
+
+      <div class="stat-card">
+
+        <h3>Teams Online</h3>
+
+        <span>24</span>
+
+        <p>Monitoramento ativo</p>
+
+      </div>
+
+    </div>
+
+    <!-- FILTER BAR -->
+
+    <div class="filter-bar">
+
+      <div class="search-box">
+
+        <input
+          type="text"
+          placeholder="Pesquisar incidente..."
+        >
+
+      </div>
+
+      <div class="filter-actions">
+
+        <select>
+          <option>Status</option>
+          <option>OPEN</option>
+          <option>IN PROGRESS</option>
+          <option>CLOSED</option>
+        </select>
+
+        <select>
+          <option>Severity</option>
+          <option>LOW</option>
+          <option>MEDIUM</option>
+          <option>HIGH</option>
+          <option>CRITICAL</option>
+        </select>
+
+      </div>
+
+    </div>
+
+    <!-- TABLE -->
+
+    <table>
+
+      <thead>
+
+        <tr>
+
+          <th>ID</th>
+
+          <th>Título</th>
+
+          <th>Equipe</th>
+
+          <th>Status</th>
+
+          <th>Severidade</th>
+
+          <th>Data</th>
+
+          <th>Responsável</th>
+
+          <th>Ações</th>
+
+        </tr>
+
+      </thead>
+
+      <tbody>
+
+        <tr>
+
+          <td>#001</td>
+
+          <td>Servidor Offline</td>
+
+          <td>Infrastructure</td>
+
+          <td>
+            <span class="badge open">
+              OPEN
+            </span>
+          </td>
+
+          <td>
+            <span class="badge critical">
+              CRITICAL
+            </span>
+          </td>
+
+          <td>22/05/2026</td>
+
+          <td>Maria Souza</td>
+
+          <td>
+
+            <div class="actions">
+
+              <button class="view-btn">
+                Ver
+              </button>
+
+              <button class="edit-btn">
+                Editar
+              </button>
+
+              <button class="delete-btn">
+                Excluir
+              </button>
+
+            </div>
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>#002</td>
+
+          <td>Erro na API de Pagamento</td>
+
+          <td>Backend</td>
+
+          <td>
+            <span class="badge progress">
+              IN PROGRESS
+            </span>
+          </td>
+
+          <td>
+            <span class="badge high">
+              HIGH
+            </span>
+          </td>
+
+          <td>21/05/2026</td>
+
+          <td>Lucas Martins</td>
+
+          <td>
+
+            <div class="actions">
+
+              <button class="view-btn">
+                Ver
+              </button>
+
+              <button class="edit-btn">
+                Editar
+              </button>
+
+              <button class="delete-btn">
+                Excluir
+              </button>
+
+            </div>
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>#003</td>
+
+          <td>Falha de Autenticação JWT</td>
+
+          <td>Security</td>
+
+          <td>
+            <span class="badge closed">
+              CLOSED
+            </span>
+          </td>
+
+          <td>
+            <span class="badge medium">
+              MEDIUM
+            </span>
+          </td>
+
+          <td>20/05/2026</td>
+
+          <td>Fernanda Lima</td>
+
+          <td>
+
+            <div class="actions">
+
+              <button class="view-btn">
+                Ver
+              </button>
+
+              <button class="edit-btn">
+                Editar
+              </button>
+
+              <button class="delete-btn">
+                Excluir
+              </button>
+
+            </div>
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>#004</td>
+
+          <td>Banco de Dados Lento</td>
+
+          <td>Database</td>
+
+          <td>
+            <span class="badge progress">
+              IN PROGRESS
+            </span>
+          </td>
+
+          <td>
+            <span class="badge high">
+              HIGH
+            </span>
+          </td>
+
+          <td>19/05/2026</td>
+
+          <td>João Pedro</td>
+
+          <td>
+
+            <div class="actions">
+
+              <button class="view-btn">
+                Ver
+              </button>
+
+              <button class="edit-btn">
+                Editar
+              </button>
+
+              <button class="delete-btn">
+                Excluir
+              </button>
+
+            </div>
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>#005</td>
+
+          <td>Deploy com Erro</td>
+
+          <td>DevOps</td>
+
+          <td>
+            <span class="badge open">
+              OPEN
+            </span>
+          </td>
+
+          <td>
+            <span class="badge low">
+              LOW
+            </span>
+          </td>
+
+          <td>18/05/2026</td>
+
+          <td>Amanda Costa</td>
+
+          <td>
+
+            <div class="actions">
+
+              <button class="view-btn">
+                Ver
+              </button>
+
+              <button class="edit-btn">
+                Editar
+              </button>
+
+              <button class="delete-btn">
+                Excluir
+              </button>
+
+            </div>
+
+          </td>
+
+        </tr>
+
+      </tbody>
+
+    </table>
+
+    <!-- PAGINATION -->
+
+    <div class="pagination">
+
+      <button>&lt;</button>
+
+      <button class="active">
+        1
+      </button>
+
+      <button>2</button>
+
+      <button>3</button>
+
+      <button>4</button>
+
+      <button>&gt;</button>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 Incident Management System
+    </p>
+
+    <span>
+      Enterprise Monitoring Platform
+    </span>
+
+  </footer>
+
+  <!-- Bootstrap JS -->
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+
+</body>
+
+</html>
